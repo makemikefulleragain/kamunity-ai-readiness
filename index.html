@@ -29,6 +29,13 @@
     <title>AI Readiness — Kamunity</title>
   </head>
   <body class="bg-warmwhite text-charcoal antialiased">
+
+<!-- ACKNOWLEDGEMENT OF COUNTRY (Constitutional Principle 8 — visible on every page) -->
+<div id="aoc-banner" style="background:#1a1a1a;color:#c8c8b8;font-family:monospace;font-size:0.72rem;padding:0.5rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;line-height:1.5;">
+  <span>Built in Boorloo/Perth, on Whadjuk Noongar country. We acknowledge Whadjuk Noongar people as the traditional custodians of this land.</span>
+  <button id="aoc-close" aria-label="Dismiss acknowledgement" style="background:none;border:none;color:#888;font-size:1.2rem;cursor:pointer;line-height:1;flex-shrink:0;padding:0.2rem 0.4rem;">×</button>
+</div>
+
     <div id="root"></div>
     <form name="feedback" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="bot-field" />
@@ -36,5 +43,6 @@
       <textarea name="message"></textarea>
     </form>
     <script type="module" src="/src/main.jsx"></script>
+    <script>(function(){var b=document.getElementById('aoc-banner');var c=document.getElementById('aoc-close');if(!b||!c)return;if(sessionStorage.getItem('aoc-dismissed')){b.style.display='none';return;}c.addEventListener('click',function(){b.style.display='none';sessionStorage.setItem('aoc-dismissed','1');});}());</script>
   </body>
 </html>
