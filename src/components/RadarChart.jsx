@@ -19,17 +19,28 @@ export default function RadarChart({ dimensionScores }) {
   return (
     <div className="w-full" style={{ height: 320 }}>
       <ResponsiveContainer width="100%" height="100%">
-        <RechartsRadarChart data={data} cx="50%" cy="50%" outerRadius="75%">
+        <RechartsRadarChart data={data} cx="50%" cy="50%" outerRadius="60%">
           <PolarGrid
             stroke="#d9e8dc"
             strokeWidth={1}
           />
           <PolarAngleAxis
             dataKey="dimension"
-            tick={{
-              fill: '#2D2D2D',
-              fontSize: 13,
-              fontWeight: 600,
+            tick={({ x, y, payload }) => {
+              const labels = {
+                'Understanding': ['Understanding'],
+                'Current Use': ['Current', 'Use'],
+                'Safety & Ethics': ['Safety &', 'Ethics'],
+                'Readiness to Act': ['Readiness', 'to Act'],
+              }
+              const lines = labels[payload.value] || [payload.value]
+              return (
+                <text x={x} y={y} textAnchor="middle" fill="#2D2D2D" fontSize={11} fontWeight={600}>
+                  {lines.map((line, index) => (
+                    <tspan key={line} x={x} dy={index === 0 ? (lines.length > 1 ? -2 : 4) : 13}>{line}</tspan>
+                  ))}
+                </text>
+              )
             }}
           />
           <PolarRadiusAxis
