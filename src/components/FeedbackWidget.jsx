@@ -22,13 +22,18 @@ export default function FeedbackWidget() {
       formData.append('emoji', selectedEmoji)
       formData.append('message', message)
 
-      await fetch('/', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData.toString(),
       })
 
+      if (!response.ok) {
+        throw new Error(`Feedback request failed with status ${response.status}`)
+      }
+
       setSubmitted(true)
+      setError(false)
     } catch {
       setError(true)
     }
@@ -95,8 +100,9 @@ export default function FeedbackWidget() {
           </>
         )}
 
-        <p className="text-gray-400 text-xs text-center mt-2">
-          Anonymous — no email or name collected.
+        <p className="text-gray-400 text-xs text-center mt-2 leading-relaxed">
+          Optional feedback sends your reaction and message to Netlify Forms. No
+          name or email is requested. Please don&apos;t include personal or sensitive information.
         </p>
       </form>
     </div>

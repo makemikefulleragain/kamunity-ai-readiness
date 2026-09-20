@@ -63,7 +63,8 @@ export default function Layout({ children }) {
             >
               Kamunity
             </a>
-            . No data is collected or stored.
+            . Quiz answers stay in your browser and are not transmitted. Optional
+            feedback is sent only if you choose to submit it.
           </p>
           <div className="mt-3 flex items-center justify-center gap-3 flex-wrap text-xs">
             <a href="https://kamunity-audit.netlify.app" target="_blank" rel="noopener noreferrer" className="text-moss-500 hover:text-moss-600 no-underline">🧭 Sovereignty Audit</a>

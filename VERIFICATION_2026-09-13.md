@@ -12,4 +12,8 @@ The first mobile check found navigation overflow and clipped radar labels. The h
 
 Remaining limitations: questionnaire/claims are not professionally validated by arithmetic tests; separate questionnaire versions are preserved, not merged; answers live only in memory, so page reload does not preserve completed results; bundle performance and deployment/runtime parity need review. No remote push or deployment is included.
 
+## 20 September 2026 release-candidate update
+
+The canonical local source now has 21 passing tests, zero dependency advisories and a code-split production build without the earlier large-chunk warning. The twelve-question flow, results, reset, all ten public routes and mobile layout passed again. Optional feedback disclosure now accurately distinguishes untransmitted quiz answers from reaction/message data sent to Netlify Forms, and non-success responses no longer show false success. A restrictive CSP was added and the acknowledgement script moved to an external same-origin file. The current public deployment remains older and was inspected read-only; no push or deployment occurred. Full evidence: `LOCAL_RELEASE_ACCEPTANCE_2026-09-20.md`.
+
 Router reference: [v7 compatibility re-export](https://api.reactrouter.com/v7/modules/react-router-dom.html).
