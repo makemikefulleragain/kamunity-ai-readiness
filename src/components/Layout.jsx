@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-white border-b border-moss-100">
-        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="max-w-3xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 bg-moss-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">K</span>
@@ -22,7 +22,7 @@ export default function Layout({ children }) {
             </div>
           </Link>
           {!isQuiz && (
-            <nav className="flex items-center gap-4 text-sm">
+            <nav className="flex w-full sm:w-auto flex-wrap items-center justify-between sm:justify-start gap-3 text-sm">
               <Link
                 to="/"
                 className="text-charcoal hover:text-moss-600 transition-colors"
@@ -63,7 +63,8 @@ export default function Layout({ children }) {
             >
               Kamunity
             </a>
-            . No data is collected or stored.
+            . Quiz answers stay in your browser and are not transmitted. Optional
+            feedback is sent only if you choose to submit it.
           </p>
           <div className="mt-3 flex items-center justify-center gap-3 flex-wrap text-xs">
             <a href="https://kamunity-audit.netlify.app" target="_blank" rel="noopener noreferrer" className="text-moss-500 hover:text-moss-600 no-underline">🧭 Sovereignty Audit</a>

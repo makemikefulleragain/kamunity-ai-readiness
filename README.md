@@ -14,7 +14,7 @@ Free 12-question AI readiness quiz for WA community organisations. Fully client-
 
 ## Status
 
-Standalone tool — **cannibalised into Ring Two MVP (R2-02)** as the embedded AI Readiness page. The standalone site remains live for direct linking and SEO.
+Standalone tool retained as one of the curated public/commercial Kamunity tools. An earlier copy was embedded in Ring Two MVP (R2-02); that historical reuse does not replace this repository as the canonical standalone source.
 
 Quiz questions ported verbatim to `PROJECTS/ring-two-mvp/site/js/quiz-aiready.js`.
 
@@ -26,10 +26,14 @@ Quiz questions ported verbatim to `PROJECTS/ring-two-mvp/site/js/quiz-aiready.js
 | 2 | Connect to Tools & Kits (consulting warm path) | 🔨 Partial — Ring Two handles this via R2-02 |
 | 3 | Kai integration (describes + recommends tool) | ⬜ Pending |
 
+## Release status
+
+The current public site is live, but the accepted 20 September 2026 local candidate is not yet published. See `LOCAL_RELEASE_ACCEPTANCE_2026-09-20.md` for tests, browser evidence, the public comparison and the owner-approval gate.
+
 ## Human Actions Pending
 
-- Confirm standalone site URL is still live and not broken post Ring Two launch
-- Decide: retire standalone to redirect → Ring Two, or keep as separate entry point?
+- Review and approve or defer the exact GitHub push and Netlify deployment.
+- After an approved deployment, repeat the public quiz, mobile-route, feedback-failure and security-header checks before calling the release complete.
 
 ## Key Files
 

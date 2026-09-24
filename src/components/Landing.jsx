@@ -11,8 +11,8 @@ export default function Landing() {
         </h1>
         <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
           A free, 2-minute self-assessment designed for community organisations,
-          NFPs, and neighbourhood centres. No jargon. No data collected. Just
-          practical, honest guidance.
+          NFPs, and neighbourhood centres. No jargon. Your quiz answers stay in
+          your browser. Just practical, honest guidance.
         </p>
         <Link to="/quiz" className="btn-primary text-xl px-8 py-4">
           Start the Quiz

@@ -6,7 +6,8 @@ Kamunity AI Readiness helps community organisations, NFPs, neighbourhood centres
 
 ## Key Facts
 - Free tool, no login required
-- No data collected or stored
+- Quiz answers stay in the browser and are not transmitted
+- Optional feedback sends a reaction and message to Netlify Forms; no name or email is requested
 - Designed for the Australian community sector
 - Companion to kamunity-audit.netlify.app
 - Built by Kamunity (kamunity.org)
@@ -35,4 +36,4 @@ Kamunity AI Readiness helps community organisations, NFPs, neighbourhood centres
 ## Content Policy
 
 search=yes, ai-input=yes, ai-train=no (see robots.txt Content-Signal)
-Tool runs 100% client-side. No data collected or stored.
+The quiz runs client-side and its answers are not transmitted. Optional feedback is sent only when a user chooses to submit it; users are asked not to include personal or sensitive information.
